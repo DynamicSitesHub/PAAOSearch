@@ -21,7 +21,8 @@ var style_Substations_10 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        
+        image: new ol.style.RegularShape({radius: 4.0 + size, points: 3,
+            stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: 'rgba(231,111,53,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

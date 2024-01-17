@@ -174,21 +174,21 @@ var lyr_PALeadslastupdated11624_11 = new ol.layer.Vector({
                 source:jsonSource_PALeadslastupdated11624_11, 
                 style: style_PALeadslastupdated11624_11,
                 interactive: true,
-    title: 'PA Leads (last updated 1/16/24)<br />\
-    <img src="styles/legend/PALeadslastupdated11624_11_0.png" /> Tier 1<br />\
-    <img src="styles/legend/PALeadslastupdated11624_11_1.png" /> Tier 2<br />\
-    <img src="styles/legend/PALeadslastupdated11624_11_2.png" /> Non-Tier Searches<br />'
-        });
+                title: '<img src="styles/legend/PALeadslastupdated11624_11.png" /> PA Leads (last updated 1/16/24)'
+            });
 var format_PAOpportunitieslastupdated11624_12 = new ol.format.GeoJSON();
 var features_PAOpportunitieslastupdated11624_12 = format_PAOpportunitieslastupdated11624_12.readFeatures(json_PAOpportunitieslastupdated11624_12, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_PAOpportunitieslastupdated11624_12 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PAOpportunitieslastupdated11624_12.addFeatures(features_PAOpportunitieslastupdated11624_12);
+jsonSource_PAOpportunitieslastupdated11624_12.addFeatures(features_PAOpportunitieslastupdated11624_12);cluster_PAOpportunitieslastupdated11624_12 = new ol.source.Cluster({
+  distance: 10,
+  source: jsonSource_PAOpportunitieslastupdated11624_12
+});
 var lyr_PAOpportunitieslastupdated11624_12 = new ol.layer.Vector({
                 declutter: true,
-                source:jsonSource_PAOpportunitieslastupdated11624_12, 
+                source:cluster_PAOpportunitieslastupdated11624_12, 
                 style: style_PAOpportunitieslastupdated11624_12,
                 interactive: true,
                 title: '<img src="styles/legend/PAOpportunitieslastupdated11624_12.png" /> PA Opportunities (last updated 1/16/24)'
@@ -225,7 +225,7 @@ var group_Basemaps = new ol.layer.Group({
                                 layers: [lyr_ESRIGray_0,lyr_GoogleTerrain_1,lyr_GoogleImagery_2,lyr_OpenStreetMap_3,],
                                 title: "Basemaps"});
 
-lyr_ESRIGray_0.setVisible(true);lyr_GoogleTerrain_1.setVisible(true);lyr_GoogleImagery_2.setVisible(true);lyr_OpenStreetMap_3.setVisible(true);lyr_IOU_4.setVisible(true);lyr_Cooperative_5.setVisible(true);lyr_Municipal_6.setVisible(true);lyr_TransmissionLines_7.setVisible(true);lyr_Tier2Buffer_8.setVisible(true);lyr_Tier1Buffer_9.setVisible(true);lyr_Substations_10.setVisible(true);lyr_PALeadslastupdated11624_11.setVisible(true);lyr_PAOpportunitieslastupdated11624_12.setVisible(true);lyr_PennsylvaniaCounties_13.setVisible(true);lyr_Pennsylvania_14.setVisible(true);
+lyr_ESRIGray_0.setVisible(true);lyr_GoogleTerrain_1.setVisible(true);lyr_GoogleImagery_2.setVisible(true);lyr_OpenStreetMap_3.setVisible(true);lyr_IOU_4.setVisible(true);lyr_Cooperative_5.setVisible(true);lyr_Municipal_6.setVisible(true);lyr_TransmissionLines_7.setVisible(true);lyr_Tier2Buffer_8.setVisible(false);lyr_Tier1Buffer_9.setVisible(false);lyr_Substations_10.setVisible(true);lyr_PALeadslastupdated11624_11.setVisible(true);lyr_PAOpportunitieslastupdated11624_12.setVisible(true);lyr_PennsylvaniaCounties_13.setVisible(true);lyr_Pennsylvania_14.setVisible(true);
 var layersList = [group_Basemaps,lyr_IOU_4,lyr_Cooperative_5,lyr_Municipal_6,lyr_TransmissionLines_7,lyr_Tier2Buffer_8,lyr_Tier1Buffer_9,lyr_Substations_10,lyr_PALeadslastupdated11624_11,lyr_PAOpportunitieslastupdated11624_12,lyr_PennsylvaniaCounties_13,lyr_Pennsylvania_14];
 lyr_IOU_4.set('fieldAliases', {'NAME': 'NAME', 'STATE': 'STATE', 'TYPE': 'TYPE', 'NAICS_DESC': 'NAICS_DESC', 'CNTRL_AREA': 'CNTRL_AREA', 'PLAN_AREA': 'PLAN_AREA', 'HOLDING_CO': 'HOLDING_CO', });
 lyr_Cooperative_5.set('fieldAliases', {'NAME': 'NAME', 'STATE': 'STATE', 'TYPE': 'TYPE', 'NAICS_DESC': 'NAICS_DESC', 'CNTRL_AREA': 'CNTRL_AREA', 'PLAN_AREA': 'PLAN_AREA', 'HOLDING_CO': 'HOLDING_CO', });
@@ -250,12 +250,12 @@ lyr_PAOpportunitieslastupdated11624_12.set('fieldImages', {'Owner Role': 'TextEd
 lyr_PennsylvaniaCounties_13.set('fieldImages', {'NAMELSAD': 'TextEdit', });
 lyr_Pennsylvania_14.set('fieldImages', {'STATE': 'TextEdit', 'NAME': 'TextEdit', 'FIPS': 'TextEdit', 'LON': 'TextEdit', 'LAT': 'TextEdit', });
 lyr_IOU_4.set('fieldLabels', {'NAME': 'header label', 'STATE': 'inline label', 'TYPE': 'inline label', 'NAICS_DESC': 'inline label', 'CNTRL_AREA': 'inline label', 'PLAN_AREA': 'inline label', 'HOLDING_CO': 'inline label', });
-lyr_Cooperative_5.set('fieldLabels', {'NAME': 'header label', 'STATE': 'inline label', 'TYPE': 'inline label', 'NAICS_DESC': 'inline label', 'CNTRL_AREA': 'inline label', 'PLAN_AREA': 'inline label', 'HOLDING_CO': 'inline label', 'color_id': 'inline label', });
-lyr_Municipal_6.set('fieldLabels', {'NAME': 'header label', 'STATE': 'inline label', 'TYPE': 'inline label', 'NAICS_DESC': 'inline label', 'CNTRL_AREA': 'inline label', 'PLAN_AREA': 'inline label', 'HOLDING_CO': 'inline label', 'color_id': 'inline label', });
+lyr_Cooperative_5.set('fieldLabels', {'NAME': 'header label', 'STATE': 'inline label', 'TYPE': 'inline label', 'NAICS_DESC': 'inline label', 'CNTRL_AREA': 'inline label', 'PLAN_AREA': 'inline label', 'HOLDING_CO': 'inline label', });
+lyr_Municipal_6.set('fieldLabels', {'NAME': 'header label', 'STATE': 'inline label', 'TYPE': 'inline label', 'NAICS_DESC': 'inline label', 'CNTRL_AREA': 'inline label', 'PLAN_AREA': 'inline label', 'HOLDING_CO': 'inline label', });
 lyr_TransmissionLines_7.set('fieldLabels', {'OWNER': 'header label', 'VOLTAGE': 'inline label', 'SUB_1': 'inline label', 'SUB_2': 'inline label', });
 lyr_Tier2Buffer_8.set('fieldLabels', {'id': 'no label', 'name': 'no label', 'city': 'no label', 'state': 'no label', 'zip': 'no label', 'type': 'no label', 'status': 'no label', 'county': 'no label', 'countyfips': 'no label', 'country': 'no label', 'latitude': 'no label', 'longitude': 'no label', 'naics_code': 'no label', 'naics_desc': 'no label', 'source': 'no label', 'sourcedate': 'no label', 'val_method': 'no label', 'val_date': 'no label', 'lines': 'no label', 'max_volt': 'no label', 'min_volt': 'no label', 'max_infer': 'no label', 'min_infer': 'no label', });
 lyr_Tier1Buffer_9.set('fieldLabels', {'id': 'no label', 'name': 'no label', 'city': 'no label', 'state': 'no label', 'zip': 'no label', 'type': 'no label', 'status': 'no label', 'county': 'no label', 'countyfips': 'no label', 'country': 'no label', 'latitude': 'no label', 'longitude': 'no label', 'naics_code': 'no label', 'naics_desc': 'no label', 'source': 'no label', 'sourcedate': 'no label', 'val_method': 'no label', 'val_date': 'no label', 'lines': 'no label', 'max_volt': 'no label', 'min_volt': 'no label', 'max_infer': 'no label', 'min_infer': 'no label', });
-lyr_Substations_10.set('fieldLabels', {'name': 'header label', 'city': 'inline label', 'zip': 'inline label', });
+lyr_Substations_10.set('fieldLabels', {'name': 'no label', 'city': 'no label', 'zip': 'no label', });
 lyr_PALeadslastupdated11624_11.set('fieldLabels', {'Site #': 'header label', 'Site Tier': 'inline label', 'POI Voltage': 'inline label', 'First Name': 'inline label', 'Last Name': 'inline label', 'Company / Account': 'inline label', 'APN/PIN': 'inline label', 'Buildable Area (acres)': 'inline label', 'Lot Size': 'inline label', 'Site Municipal': 'inline label', 'Site County': 'inline label', 'Substation': 'inline label', 'AO Link': 'inline label', 'AO Project': 'inline label', 'Site Lat/Long Coordinates (Latitude)': 'inline label', 'Site Lat/Long Coordinates (Longitude)': 'inline label', 'Robust ID': 'inline label', 'Site Address': 'inline label', 'Site State': 'inline label', 'Market': 'inline label', });
 lyr_PAOpportunitieslastupdated11624_12.set('fieldLabels', {'Owner Role': 'inline label', 'Opportunity Owner': 'header label', 'Account Name': 'inline label', 'Stage': 'inline label', 'Lead Source': 'inline label', 'Type': 'inline label', 'AO Link': 'inline label', 'APN/PIN': 'inline label', 'Site County': 'inline label', 'Site #': 'inline label', 'Robust ID': 'inline label', 'Site Lat/Long Coordinates (Latitude)': 'inline label', 'Site Lat/Long Coordinates (Longitude)': 'inline label', 'Site Address': 'inline label', });
 lyr_PennsylvaniaCounties_13.set('fieldLabels', {'NAMELSAD': 'header label', });

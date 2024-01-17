@@ -1,0 +1,13 @@
+ez_gis.electric_substation_hifld_v4.dbf contains the following fields.
+Field names are limited to 10 characters in .dbf format. This file provides the original extended field names and field aliases.
+
+Field Name | Extended Field Name | Alias
+-----------+---------------------+-----------
+name       | name                | Name
+type       | type                | Type
+status     | status              | Status
+sourcedate | sourcedate          | Source Date
+val_date   | val_date            | Validation Date
+lines      | lines               | Number of Lines
+max_volt   | max_volt            | Maximum Voltage (kV)
+min_volt   | min_volt            | Minimum Voltage (kV)

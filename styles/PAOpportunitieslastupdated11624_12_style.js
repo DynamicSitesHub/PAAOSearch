@@ -8,30 +8,20 @@ var style_PAOpportunitieslastupdated11624_12 = function(feature, resolution){
     };
     var value = ""
     var labelText = "";
-    var clusteredFeatures = feature.get("features");
+    size = 0;
     var labelFont = "10px, sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
     var bufferWidth = 0;
-    size = clusteredFeatures.length;
-    var textAlign = "center";
-    var offsetX = 0;
-    var offsetY = 0;
-    if (size == 1) {
-        textAlign = "left"
-        offsetX = 8
-        offsetY = 3
-        var feature = clusteredFeatures[0];
-        if ("" !== null) {
-            labelText = String("");
-        }
-        key = value + "_" + labelText
-    } else {
-        labelText = size.toString()
-        size = 2*(Math.log(size)/ Math.log(2))
+    var textAlign = "left";
+    var offsetX = 8;
+    var offsetY = 3;
+    var placement = 'point';
+    if ("" !== null) {
+        labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 4.0 + size,
+        image: new ol.style.Circle({radius: 3.2 + size,
              fill: new ol.style.Fill({color: 'rgba(255,158,23,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

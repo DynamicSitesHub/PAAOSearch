@@ -182,13 +182,10 @@ var features_PAOpportunitieslastupdated11624_12 = format_PAOpportunitieslastupda
 var jsonSource_PAOpportunitieslastupdated11624_12 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PAOpportunitieslastupdated11624_12.addFeatures(features_PAOpportunitieslastupdated11624_12);cluster_PAOpportunitieslastupdated11624_12 = new ol.source.Cluster({
-  distance: 10,
-  source: jsonSource_PAOpportunitieslastupdated11624_12
-});
+jsonSource_PAOpportunitieslastupdated11624_12.addFeatures(features_PAOpportunitieslastupdated11624_12);
 var lyr_PAOpportunitieslastupdated11624_12 = new ol.layer.Vector({
                 declutter: true,
-                source:cluster_PAOpportunitieslastupdated11624_12, 
+                source:jsonSource_PAOpportunitieslastupdated11624_12, 
                 style: style_PAOpportunitieslastupdated11624_12,
                 interactive: true,
                 title: '<img src="styles/legend/PAOpportunitieslastupdated11624_12.png" /> PA Opportunities (last updated 1/16/24)'

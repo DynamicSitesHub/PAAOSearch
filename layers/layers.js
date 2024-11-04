@@ -202,7 +202,7 @@ var lyr_PALeadslastupdated11624_13 = new ol.layer.Vector({
                 source:jsonSource_PALeadslastupdated11624_13, 
                 style: style_PALeadslastupdated11624_13,
                 interactive: true,
-                title: '<img src="styles/legend/PALeadslastupdated11624_13.png" /> PA Leads (last updated 1/16/24)'
+                title: '<img src="styles/legend/PALeadslastupdated11624_13.png" /> PA Leads (last updated 11/04/24)'
             });
 var format_PAOpportunitieslastupdated11624_14 = new ol.format.GeoJSON();
 var features_PAOpportunitieslastupdated11624_14 = format_PAOpportunitieslastupdated11624_14.readFeatures(json_PAOpportunitieslastupdated11624_14, 
@@ -216,7 +216,7 @@ var lyr_PAOpportunitieslastupdated11624_14 = new ol.layer.Vector({
                 source:jsonSource_PAOpportunitieslastupdated11624_14, 
                 style: style_PAOpportunitieslastupdated11624_14,
                 interactive: true,
-                title: '<img src="styles/legend/PAOpportunitieslastupdated11624_14.png" /> PA Opportunities (last updated 1/16/24)'
+                title: '<img src="styles/legend/PAOpportunitieslastupdated11624_14.png" /> PA Opportunities (last updated 11/04/24)'
             });
 var format_PennsylvaniaCounties_15 = new ol.format.GeoJSON();
 var features_PennsylvaniaCounties_15 = format_PennsylvaniaCounties_15.readFeatures(json_PennsylvaniaCounties_15, 
